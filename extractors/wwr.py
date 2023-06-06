@@ -9,6 +9,7 @@ def extract_wwr_jobs(keyword):
     print('Cant request website')
   else:
     results = []
+    results.append({'position': '<We Work Remotely jobs>', 'company':' ', 'location': ' ', 'link':' '})
     soup = BeautifulSoup(response.text, "html.parser")
     jobs = soup.find_all('section', class_='jobs')
     for job in jobs:
@@ -20,6 +21,7 @@ def extract_wwr_jobs(keyword):
         link = anchor['href']
         company, time, region = anchor.find_all('span', class_='company')
         title = anchor.find('span', class_='title')
+        
 
         job_data = {
           'link' : f"https://weworkremotely.com{link}",

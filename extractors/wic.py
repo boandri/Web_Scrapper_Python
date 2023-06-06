@@ -8,6 +8,7 @@ def extract_wic_jobs():
     print("Can't request website")
   else:
     result = []
+    result.append({'position': '<Work In Culture CA jobs>', 'company':' ', 'location': ' ', 'link':' '})
     soup = BeautifulSoup(response.text, "html.parser")
     jobs = soup.find("div", {"id":"jobResultList"})
     job_posts = jobs.select("table tr")
@@ -18,6 +19,7 @@ def extract_wic_jobs():
       location = job.select('td')[1]
       anchor = job.select_one("a")
       link = anchor['href']
+      
 
       job_data = {
         "company" : company.string.replace(",", " "),
