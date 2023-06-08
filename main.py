@@ -15,7 +15,7 @@ def home():
 @app.route("/search")  
 def search():
   keyword = request.args.get("keyword")
-  if keyword == None:
+  if keyword == None or keyword == "":
     return redirect("/")
   if keyword in db:
     jobs = db[keyword]
@@ -30,7 +30,7 @@ def search():
 @app.route("/export")
 def export():
   keyword = request.args.get("keyword")
-  if keyword == None:
+  if keyword == None or keyword == "":
     return redirect("/")
   if keyword not in db:
     return redirect(f"/search?keyword={keyword}")

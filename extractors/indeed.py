@@ -35,7 +35,7 @@ def extract_indeed_jobs(keyword):
   print("---------------------")
 
   results = []
-  results.append({'position': '<indeed jobs>', 'company':' ', 'location': ' ', 'link':' '})
+  # results.append({'position': '<indeed jobs>', 'company':' ', 'location': ' ', 'link':' '})
 
   for page in range(pages):
     options = webdriver.ChromeOptions()

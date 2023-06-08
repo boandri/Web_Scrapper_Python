@@ -6,15 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Scrapper</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+  <nav id="main-nav">
+    <ul>
+      <li id="home-logo"><a href="/"><strong>SWJ</strong></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/boandri/Web_Scrapper_Python"><img id="git-logo" src="../static/img/git_blk-crop.png"></a></li>
+    </ul>
+  </nav>
   <main class="container">
     <h1>Job Scrapper</h1>
-    <h4>What job do you want?</h4>
-    <form action="/search">
-      <input type="text" name="keyword" placeholder="Write one keyword" />
-      <button>Search</button>
-    </form>
+    <hr>
+    <h4>Search Live Jobs</h4>
+    <small>Check out current openings. Please apply to the roles that interest you or share postings with your network.</small>
+    <br><br><br><br>
+    <div>
+      <form action="/search">
+        <input type="text" name="keyword" placeholder='"python"' />
+        <button>Search</button>
+      </form>
+    </div>
   </main>
 </body>
 </html>

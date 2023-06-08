@@ -6,12 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Scrapper</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+  <nav id="main-nav">
+    <ul>
+      <li id="home-logo"><a href="/"><strong>SWJ</strong></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/boandri/Web_Scrapper_Python"><img id="git-logo" src="../static/img/git_blk-crop.png"></a></li>
+    </ul>
+  </nav>
   <main class="container">
     <hgroup>
       <h1>Search Results for "{{keyword}}"</h1>
-      <a target="_blank" href="/export?keyword={{keyword}}">Export to file</a>
+      <br>
+      <hr>
+      <br>
+      <div>
+        <a target="_blank" href="/export?keyword={{keyword}}" role="button">Export to file</a>
+        <a href="/" role="button" class="secondary">Back to home</a>
+      </div>
+      <br>
     </hgroup>
     <figure>
       <table role="grid">

@@ -8,7 +8,7 @@ def extract_wic_jobs():
     print("Can't request website")
   else:
     result = []
-    result.append({'position': '<Work In Culture CA jobs>', 'company':' ', 'location': ' ', 'link':' '})
+    # result.append({'position': '<Work In Culture CA jobs>', 'company':' ', 'location': ' ', 'link':' '})
     soup = BeautifulSoup(response.text, "html.parser")
     jobs = soup.find("div", {"id":"jobResultList"})
     job_posts = jobs.select("table tr")

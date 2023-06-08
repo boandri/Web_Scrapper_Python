@@ -1,0 +1,25 @@
+#main-nav{
+    background-color: rgb(236, 236, 236);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+}
+
+#git-logo{
+    max-width: 30px;
+    max-height: 30px;
+    right: 40px;
+    top: 20px;
+    position: fixed;
+}
+
+#home-logo{
+    padding: 10%;
+    margin-left: 80px;
+}
+
+body {
+    padding-top: 60px;
+  }
