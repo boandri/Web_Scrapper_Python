@@ -10,7 +10,7 @@ db = {}
 
 @app.route("/")
 def home():
-  return render_template("home.html", name = "Tho")
+  return render_template("home.html")
 
 @app.route("/search")  
 def search():
@@ -20,10 +20,10 @@ def search():
   if keyword in db:
     jobs = db[keyword]
   else:
-    wic = extract_wic_jobs()
+    # wic = extract_wic_jobs()
     wwr = extract_wwr_jobs(keyword)
     indeed = extract_indeed_jobs(keyword)
-    jobs = indeed + wwr + wic
+    jobs = indeed + wwr
     db[keyword] = jobs
   return render_template("search.html", keyword = keyword, jobs = jobs)
 
