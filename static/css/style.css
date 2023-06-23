@@ -23,3 +23,7 @@
 body {
     padding-top: 60px;
   }
+
+.container {
+    background-image: url("{{url_for('static',filename='scraper.png')}}")
+}
